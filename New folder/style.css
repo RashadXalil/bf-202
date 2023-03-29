@@ -1,0 +1,33 @@
+/* * {
+  font-family: "Poppins", sans-serif;
+} */
+/* p{
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-align: right;
+} */
+/* span{
+
+    text-align: right;
+} */
+/* a{
+    text-decoration: overline;
+    text-decoration-style: double;
+    text-decoration-color: red;
+} */
+/* p {
+  text-transform: capitalize;
+  text-indent: 50px;
+  line-height: 50px;
+  text-shadow: 1px 1px red;
+  font-family: main__bold;
+}
+@font-face {
+  font-family: main__bold;
+  src: url(Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: main__normal;
+  src: url(Poppins/Poppins-Medium.ttf);
+} */
