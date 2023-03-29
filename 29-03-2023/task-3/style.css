@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.dropdown {
+  border: 1px solid lightgrey;
+  width: 200px;
+  transition: 0.3s;
+  height: 0px;
+}
+.dropdown > ul {
+  list-style: none;
+  transition: 0.3s;
+  opacity: 0;
+}
+ul > li {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+span {
+  margin-left: 10px;
+  width: 400px;
+  transition: width 0.3s ease;
+}
+.btn {
+  border: none;
+  background-color: lightgrey;
+  padding: 10px;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+  transition: 0.3s;
+  display: inline-block;
+  border-radius: 10px;
+}
+.btn:hover .dropdown {
+  height: 200px;
+}
+.btn:hover ul {
+  opacity: 1;
+}
