@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "name": "sass-bf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass assets/scss/style.scss -o assets/styles -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
