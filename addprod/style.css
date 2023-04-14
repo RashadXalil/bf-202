@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.custom__navbar {
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  align-items: center;
+}
+.custom__navbar__middle > ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+.custom__navbar__middle > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+.custom__card img {
+  width: 300px;
+}
+
+.custom__card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-top: 20px;
+  height: 500px;
+}
+.card__body {
+  padding: 20px;
+}
+
+.card__body {
+  text-align: center;
+}
+.card__body__footer__price {
+  display: flex;
+  flex-direction: column;
+}
+.card__body__footer {
+  display: flex;
+  justify-content: space-around;
+}
+.card__body__footer__price__discountedprice {
+  color: red;
+}
+.card__body__footer__btn {
+  border: none;
+  background-color: red;
+  color: white;
+}
+
+.discounted { 
+    text-decoration: line-through red;
+}
