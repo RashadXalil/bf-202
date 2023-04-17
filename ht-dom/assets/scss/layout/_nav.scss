@@ -1,0 +1,958 @@
+body{
+    height: 100vh;
+    background-color: gray;
+}
+.wrapper{
+    width: 100%;
+
+    &___nav{
+        width: 100%;
+        background-color: white;
+
+        &___wrap
+        {
+            width: 85%;
+            margin: 0 auto;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &___left{
+                 
+                img{
+                    width: 205px;
+                 }
+            }
+
+            &___right{
+
+                &___list{
+                    display: flex;
+                    align-items: center;
+                    
+                    .li-txt{
+                        margin: 0 30px;
+                    }
+                    .li-ico{
+                        margin: 0 10px;
+                       
+                        i{
+                            font-size: 19px;
+
+
+                        }
+                    }
+
+                    &___item{
+
+                        a{
+                            font-size: 12px;
+                            font-weight: 500;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .item8{
+                        // border: solid;
+                        
+                        a{
+                            position: relative;
+                            margin: 10px;
+                            i{
+                                .fa-bag-shopping-counter{
+                                    position: absolute;
+                                    top: -7px;
+                                    right: -7px;
+                                    width: 15px;
+                                    height: 15px;
+                                    background-color: red;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    span{
+    
+                                        color: white;font-size: 10px;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                            }
+                            // *********************
+                            position: relative;
+                            .list-line{
+                                bottom: -5px;
+                                position: absolute;
+                                border: 0px solid black;
+                                width: 0%;
+                                z-index: 1;
+                            }
+                            &:hover .list-line{
+                                border: 1px solid black;
+                                width: 100%;
+                                transition: linear 0.2s;
+                            }
+                            .cart-dropdown
+                            {
+                                // border: solid;
+                                position: absolute;
+                                padding: 20px 20px 20px 0px;
+                                background-color: white;
+                                z-index: 1;
+                                position: absolute;
+                                top: 20;
+                                right: 0;
+                                width: 230px;
+                                padding: 20px;
+                                padding-top: 50px;
+                                display: none;
+                                span{
+                                    font-weight: 600;
+                                    color: #1b1b1b7c;
+                                }
+
+                                &-list{
+                                    margin-left: 5px;
+                                    &-item{
+                                        width: 95%;
+                                        margin: 30px 0;
+                                        display: inline-block;
+                                        margin-bottom: 40px;
+                                        .cart-item{
+                                            width: 100%;
+
+                                            .cart-item-top{
+                                                width: 100%;
+                                                display: flex;
+                                                &-left{
+                                                    width: 35%;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: flex-start;
+                                                    &-img{
+                                                        // object-fit: cover;
+                                                        width: 50px;
+                                                    }
+                                                }
+                                                &-right{
+                                                    width: 65%;
+                                                    &-name{
+                                                        font-weight: 700;
+                                                        font-size: 13px;
+                                                        word-break: break-all;
+                                                    }
+                                                    &-delBtn{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: end;
+                                                        // border: solid;
+                                                        button{
+                                                            border: 0;
+                                                            background-color: white;
+                                                            cursor: pointer;
+                                                            .fa-xmark{
+                                                                font-size: 10px;
+                                                                color: red;
+                                                            }
+                                                        }
+                                                    }
+                                                    &-countPrice{
+                                                        font-size: 13px;
+                                                    }
+                                                }
+                                            }
+                                            .cart-item-middle{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-between;
+                                                font-size: 13px;
+                                                margin: 20px 0;
+                                                &-left{
+                                                    font-weight: 700;
+                                                }
+                                                &-right{
+                                                    font-weight: 500;
+                                                }
+                                            }
+                                            .cart-item-bottom{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-between;
+                                                &-btn{
+                                                    padding: 15px 24px;
+                                                    font-size: 10px;
+                                                    border: 0;
+                                                    border-radius: 0;
+                                                    color: white;
+                                                    opacity: 0.75;
+                                                    &:hover{
+                                                        transition: linear .3s;
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                                .btn-1{
+                                                    background-color: red;
+                                                }
+                                                .btn-2{
+                                                    background-color: black;
+                                                }
+                                            }
+                                        }
+                                    }
+    
+                                    & .item1{
+                                        position: relative;
+                                        margin-top: 50px;
+                                        margin-bottom: 10px;
+                                        // border: solid;
+                                    }
+                                }
+                            }
+                            &:hover .cart-dropdown{
+                                display: block;
+                            }
+                    }
+                    .item1{
+                        position: relative;
+                        .list-line{
+                            bottom: -5px;
+                            position: absolute;
+                            border: 0px solid black;
+                            width: 0%;
+                            z-index: 2;
+                        }
+                        &:hover .list-line{
+                            border: 1px solid black;
+                            width: 100%;
+                            transition: linear 0.2s;
+                        }
+                        .home-dropdown
+                        {
+                            // border: solid;
+                            position: absolute;
+                            padding: 20px 20px 20px 0px;
+                            background-color: white;
+                            z-index: 1;
+                            position: absolute;
+                            top: 20;
+                            left: -10px;
+                            width: 130px;
+                            display: none;
+
+                            &-list{
+                                margin-left: 5px;
+                                &-item{
+                                    margin: 30px 0;
+                                    display: inline-block;
+                                    margin-bottom: 40px;
+                                }
+
+                                & .item1{
+                                    position: relative;
+                                    margin-top: 50px;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+                                    .line1{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line1{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item2{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line2{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line2{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item3{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line3{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line3{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item4{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line4{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line4{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item5{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line5{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line5{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item6{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line6{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line6{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item7{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line7{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line7{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .home-dropdown{
+                            display: block;
+                        }
+                    }
+                    .item2{
+                        position: relative;
+                        .list-line{
+                            bottom: -5px;
+                            position: absolute;
+                            border: 0px solid black;
+                            width: 0%;
+                            z-index: 2;
+                        }
+                        &:hover .list-line{
+                            border: 1px solid black;
+                            width: 100%;
+                            transition: linear 0.2s;
+                        }
+
+                        .pages-dropdown
+                        {
+                            // border: solid;
+                            position: absolute;
+                            padding: 20px 20px 20px 0px;
+                            background-color: white;
+                            z-index: 1;
+                            position: absolute;
+                            top: 20;
+                            left: -10px;
+                            width: 130px;
+                            display: none;
+
+                            &-list{
+                                margin-left: 5px;
+                                &-item{
+                                    margin: 30px 0;
+                                    display: inline-block;
+                                    margin-bottom: 40px;
+                                }
+
+                                & .item1{
+                                    position: relative;
+                                    margin-top: 50px;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+                                    .line1{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line1{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item2{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line2{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line2{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item3{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line3{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line3{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .pages-dropdown{
+                            display: block;
+                        }
+                    }
+                    .item3{
+                        position: relative;
+                        .list-line{
+                            bottom: -5px;
+                            position: absolute;
+                            border: 0px solid black;
+                            width: 0%;
+                            z-index: 2;
+                        }
+                        &:hover .list-line{
+                            border: 1px solid black;
+                            width: 100%;
+                            transition: linear 0.2s;
+                        }
+                        .shop-dropdown
+                        {
+                            // border: solid;
+                            position: absolute;
+                            padding: 20px 20px 20px 0px;
+                            background-color: white;
+                            z-index: 1;
+                            position: absolute;
+                            top: 20;
+                            left: -200px;
+                            width: 400px;
+                            display: none;
+
+                            &-list{
+                                margin-left: 5px;
+                                &-item{
+                                    margin: 30px 0;
+                                    display: inline-block;
+                                    margin-bottom: 40px;
+                                }
+
+                                & .item1{
+                                    position: relative;
+                                    margin-top: 50px;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+                                    a{
+                                        font-size: 20px;
+                                        font-weight: 500;
+                                    }
+                                    .line1{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line1{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .shop-dropdown{
+                            display: block;
+                        }
+                    }
+                    .item4{
+                        position: relative;
+                        .list-line{
+                            bottom: -5px;
+                            position: absolute;
+                            border: 0px solid black;
+                            width: 0%;
+                            z-index: 2;
+                        }
+                        &:hover .list-line{
+                            border: 1px solid black;
+                            width: 100%;
+                            transition: linear 0.2s;
+                        }
+                        
+                        .portfolio-dropdown
+                        {
+                            // border: solid;
+                            position: absolute;
+                            padding: 20px 20px 20px 0px;
+                            background-color: white;
+                            z-index: 1;
+                            position: absolute;
+                            top: 20;
+                            left: -10px;
+                            width: 130px;
+                            display: none;
+
+                            &-list{
+                                margin-left: 5px;
+                                &-item{
+                                    margin: 30px 0;
+                                    display: inline-block;
+                                    margin-bottom: 40px;
+                                }
+
+                                & .item1{
+                                    position: relative;
+                                    margin-top: 50px;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+                                    .line1{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line1{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item2{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line2{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line2{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item3{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line3{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line3{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item4{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line4{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line4{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item5{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line5{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line5{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .portfolio-dropdown{
+                            display: block;
+                        }
+                    }
+                    .item5{                    
+                        position: relative;
+                        .list-line{
+                            bottom: -5px;
+                            position: absolute;
+                            border: 0px solid black;
+                            width: 0%;
+                            z-index: 2;
+                        }
+                        &:hover .list-line{
+                            border: 1px solid black;
+                            width: 100%;
+                            transition: linear 0.2s;
+                        }
+                        .blog-dropdown
+                        {
+                            // border: solid;
+                            position: absolute;
+                            padding: 20px 20px 20px 0px;
+                            background-color: white;
+                            z-index: 1;
+                            position: absolute;
+                            top: 20;
+                            left: -10px;
+                            width: 130px;
+                            display: none;
+
+                            &-list{
+                                margin-left: 5px;
+                                &-item{
+                                    margin: 30px 0;
+                                    display: inline-block;
+                                    margin-bottom: 40px;
+                                }
+
+                                & .item1{
+                                    position: relative;
+                                    margin-top: 50px;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+                                    .line1{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line1{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item2{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line2{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line2{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item3{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line3{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line3{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .blog-dropdown{
+                            display: block;
+                        }
+                    }
+                    .item6{                      
+                        position: relative;
+                        .list-line{
+                            bottom: -5px;
+                            position: absolute;
+                            border: 0px solid black;
+                            width: 0%;
+                            z-index: 2;
+                        }
+                        &:hover .list-line{
+                            border: 1px solid black;
+                            width: 100%;
+                            transition: linear 0.2s;
+                        }
+                        .elements-dropdown
+                        {
+                            // border: solid;
+                            position: absolute;
+                            padding: 20px 20px 20px 0px;
+                            background-color: white;
+                            z-index: 1;
+                            position: absolute;
+                            top: 20;
+                            left: -10px;
+                            width: 130px;
+                            display: none;
+
+                            &-list{
+                                margin-left: 5px;
+                                &-item{
+                                    margin: 30px 0;
+                                    // display: inline-block;
+                                    margin-bottom: 40px;
+                                }
+
+                                & .item1{
+                                    position: relative;
+                                    margin-top: 50px;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+                                    .line1{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line1{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item2{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line2{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line2{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item3{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line3{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line3{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                                & .item4{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    // border: solid;
+
+                                    .line4{
+                                        position: absolute;
+                                        border: 0px solid black;
+                                        width: 0%;
+                                    }
+                                    &:hover .line4{
+                                        border: 1px solid black;
+                                        width: 100%;
+                                        transition: linear 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .elements-dropdown{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &___slider{
+        width: 100%;
+        background-image: url(../img/h3-slider-background-2.jpg);
+        background-position: center;
+        padding: 190px 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @keyframes myAnim {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.03);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        animation: myAnim linear 4s infinite;
+
+        &___wrap{
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+
+            &___txt{
+                width: 30%;
+
+                .p-1{
+                    font-size: 41px;
+                    span{
+                        color: red;
+                    }
+                    margin-bottom: 30px;
+                }
+                .p-2{
+                    font-size: 17px;
+                    font-weight: 400;
+                    color: rgb(112, 112, 112);
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    &___vitrine{
+        width: 100%;
+        padding-top: 50px;
+        background-color: white;
+        &___wrap{
+            width: 85%;
+            margin: 0 auto;
+            &___top{
+                display: flex;
+                align-items: center;
+                padding: 20px;
+
+                &___list{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+
+                    &-item{
+
+                        a{
+                            font-size: 13px;  
+                            text-decoration: none;
+                            font-weight: 600;
+                            &:hover{
+                                color: red;
+                                transition: linear 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+            &___bottom{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+                flex-wrap: wrap;
+                &-item{
+                    display: flex;
+                    flex-direction: column;
+                    width: 20%;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: white;
+                    img{
+                        width: 300px;
+                        overflow: hidden;
+                        &:hover{
+                            transform: scale(1.05);
+                            transition: linear 0.3s;
+                        }
+                    }
+                    p{  
+                        line-height: 60px;
+                        font-size: 11px;
+                        font-weight: 700;
+                        letter-spacing: 5px;
+                    }
+                    button{
+                        border: 0;
+                        background-color: white;
+                        color: rgb(131, 131, 131);
+                        cursor: pointer;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}

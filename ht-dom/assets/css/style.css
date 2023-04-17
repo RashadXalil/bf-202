@@ -1,0 +1,734 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  color: #1B1B1B;
+  font-family: mons; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: mons;
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: mons-italic;
+  src: url(../fonts/Montserrat-Italic-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+body {
+  height: 100vh;
+  background-color: gray; }
+
+.wrapper {
+  width: 100%; }
+  .wrapper___nav {
+    width: 100%;
+    background-color: white; }
+    .wrapper___nav___wrap {
+      width: 85%;
+      margin: 0 auto;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .wrapper___nav___wrap___left img {
+        width: 205px; }
+      .wrapper___nav___wrap___right___list {
+        display: flex;
+        align-items: center; }
+        .wrapper___nav___wrap___right___list .li-txt {
+          margin: 0 30px; }
+        .wrapper___nav___wrap___right___list .li-ico {
+          margin: 0 10px; }
+          .wrapper___nav___wrap___right___list .li-ico i {
+            font-size: 19px; }
+        .wrapper___nav___wrap___right___list___item a {
+          font-size: 12px;
+          font-weight: 500;
+          text-decoration: none; }
+        .wrapper___nav___wrap___right___list .item8 {
+          position: relative; }
+          .wrapper___nav___wrap___right___list .item8 a {
+            position: relative;
+            margin: 10px; }
+            .wrapper___nav___wrap___right___list .item8 a i .fa-bag-shopping-counter {
+              position: absolute;
+              top: -7px;
+              right: -7px;
+              width: 15px;
+              height: 15px;
+              background-color: red;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+              .wrapper___nav___wrap___right___list .item8 a i .fa-bag-shopping-counter span {
+                color: white;
+                font-size: 10px;
+                font-weight: 700; }
+          .wrapper___nav___wrap___right___list .item8 .list-line {
+            bottom: -5px;
+            position: absolute;
+            border: 0px solid black;
+            width: 0%;
+            z-index: 1; }
+          .wrapper___nav___wrap___right___list .item8:hover .list-line {
+            border: 1px solid black;
+            width: 100%;
+            transition: linear 0.2s; }
+          .wrapper___nav___wrap___right___list .item8 .cart-dropdown {
+            position: absolute;
+            padding: 20px 20px 20px 0px;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 20;
+            right: 0;
+            width: 230px;
+            padding: 20px;
+            padding-top: 50px;
+            display: none; }
+            .wrapper___nav___wrap___right___list .item8 .cart-dropdown span {
+              font-weight: 600;
+              color: #1b1b1b7c; }
+            .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list {
+              margin-left: 5px; }
+              .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item {
+                width: 95%;
+                margin: 30px 0;
+                display: inline-block;
+                margin-bottom: 40px; }
+                .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item {
+                  width: 100%; }
+                  .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top {
+                    width: 100%;
+                    display: flex; }
+                    .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top-left {
+                      width: 35%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: flex-start; }
+                      .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top-left-img {
+                        width: 50px; }
+                    .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top-right {
+                      width: 65%; }
+                      .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top-right-name {
+                        font-weight: 700;
+                        font-size: 13px;
+                        word-break: break-all; }
+                      .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top-right-delBtn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: end; }
+                        .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top-right-delBtn button {
+                          border: 0;
+                          background-color: white;
+                          cursor: pointer; }
+                          .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top-right-delBtn button .fa-xmark {
+                            font-size: 10px;
+                            color: red; }
+                      .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-top-right-countPrice {
+                        font-size: 13px; }
+                  .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-middle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 13px;
+                    margin: 20px 0; }
+                    .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-middle-left {
+                      font-weight: 700; }
+                    .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-middle-right {
+                      font-weight: 500; }
+                  .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-bottom {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between; }
+                    .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-bottom-btn {
+                      padding: 15px 24px;
+                      font-size: 10px;
+                      border: 0;
+                      border-radius: 0;
+                      color: white;
+                      opacity: 0.75; }
+                      .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-bottom-btn:hover {
+                        transition: linear .3s;
+                        opacity: 1; }
+                    .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-bottom .btn-1 {
+                      background-color: red; }
+                    .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list-item .cart-item .cart-item-bottom .btn-2 {
+                      background-color: black; }
+              .wrapper___nav___wrap___right___list .item8 .cart-dropdown-list .item1 {
+                position: relative;
+                margin-top: 50px;
+                margin-bottom: 10px; }
+          .wrapper___nav___wrap___right___list .item8:hover .cart-dropdown {
+            display: block; }
+        .wrapper___nav___wrap___right___list .item1 {
+          position: relative; }
+          .wrapper___nav___wrap___right___list .item1 .list-line {
+            bottom: -5px;
+            position: absolute;
+            border: 0px solid black;
+            width: 0%;
+            z-index: 2; }
+          .wrapper___nav___wrap___right___list .item1:hover .list-line {
+            border: 1px solid black;
+            width: 100%;
+            transition: linear 0.2s; }
+          .wrapper___nav___wrap___right___list .item1 .home-dropdown {
+            position: absolute;
+            padding: 20px 20px 20px 0px;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 20;
+            left: -10px;
+            width: 130px;
+            display: none; }
+            .wrapper___nav___wrap___right___list .item1 .home-dropdown-list {
+              margin-left: 5px; }
+              .wrapper___nav___wrap___right___list .item1 .home-dropdown-list-item {
+                margin: 30px 0;
+                display: inline-block;
+                margin-bottom: 40px; }
+              .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item1 {
+                position: relative;
+                margin-top: 50px;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item1 .line1 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item1:hover .line1 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item2 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item2 .line2 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item2:hover .line2 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item3 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item3 .line3 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item3:hover .line3 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item4 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item4 .line4 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item4:hover .line4 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item5 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item5 .line5 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item5:hover .line5 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item6 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item6 .line6 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item6:hover .line6 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item7 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item7 .line7 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item1 .home-dropdown-list .item7:hover .line7 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+          .wrapper___nav___wrap___right___list .item1:hover .home-dropdown {
+            display: block; }
+        .wrapper___nav___wrap___right___list .item2 {
+          position: relative; }
+          .wrapper___nav___wrap___right___list .item2 .list-line {
+            bottom: -5px;
+            position: absolute;
+            border: 0px solid black;
+            width: 0%;
+            z-index: 2; }
+          .wrapper___nav___wrap___right___list .item2:hover .list-line {
+            border: 1px solid black;
+            width: 100%;
+            transition: linear 0.2s; }
+          .wrapper___nav___wrap___right___list .item2 .pages-dropdown {
+            position: absolute;
+            padding: 20px 20px 20px 0px;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 20;
+            left: -10px;
+            width: 130px;
+            display: none; }
+            .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list {
+              margin-left: 5px; }
+              .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list-item {
+                margin: 30px 0;
+                display: inline-block;
+                margin-bottom: 40px; }
+              .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item1 {
+                position: relative;
+                margin-top: 50px;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item1 .line1 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item1:hover .line1 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item2 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item2 .line2 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item2:hover .line2 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item3 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item3 .line3 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item2 .pages-dropdown-list .item3:hover .line3 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+          .wrapper___nav___wrap___right___list .item2:hover .pages-dropdown {
+            display: block; }
+        .wrapper___nav___wrap___right___list .item3 {
+          position: relative; }
+          .wrapper___nav___wrap___right___list .item3 .list-line {
+            bottom: -5px;
+            position: absolute;
+            border: 0px solid black;
+            width: 0%;
+            z-index: 2; }
+          .wrapper___nav___wrap___right___list .item3:hover .list-line {
+            border: 1px solid black;
+            width: 100%;
+            transition: linear 0.2s; }
+          .wrapper___nav___wrap___right___list .item3 .shop-dropdown {
+            position: absolute;
+            padding: 20px 20px 20px 0px;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 20;
+            left: -200px;
+            width: 400px;
+            display: none; }
+            .wrapper___nav___wrap___right___list .item3 .shop-dropdown-list {
+              margin-left: 5px; }
+              .wrapper___nav___wrap___right___list .item3 .shop-dropdown-list-item {
+                margin: 30px 0;
+                display: inline-block;
+                margin-bottom: 40px; }
+              .wrapper___nav___wrap___right___list .item3 .shop-dropdown-list .item1 {
+                position: relative;
+                margin-top: 50px;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item3 .shop-dropdown-list .item1 a {
+                  font-size: 20px;
+                  font-weight: 500; }
+                .wrapper___nav___wrap___right___list .item3 .shop-dropdown-list .item1 .line1 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item3 .shop-dropdown-list .item1:hover .line1 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+          .wrapper___nav___wrap___right___list .item3:hover .shop-dropdown {
+            display: block; }
+        .wrapper___nav___wrap___right___list .item4 {
+          position: relative; }
+          .wrapper___nav___wrap___right___list .item4 .list-line {
+            bottom: -5px;
+            position: absolute;
+            border: 0px solid black;
+            width: 0%;
+            z-index: 2; }
+          .wrapper___nav___wrap___right___list .item4:hover .list-line {
+            border: 1px solid black;
+            width: 100%;
+            transition: linear 0.2s; }
+          .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown {
+            position: absolute;
+            padding: 20px 20px 20px 0px;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 20;
+            left: -10px;
+            width: 130px;
+            display: none; }
+            .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list {
+              margin-left: 5px; }
+              .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list-item {
+                margin: 30px 0;
+                display: inline-block;
+                margin-bottom: 40px; }
+              .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item1 {
+                position: relative;
+                margin-top: 50px;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item1 .line1 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item1:hover .line1 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item2 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item2 .line2 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item2:hover .line2 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item3 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item3 .line3 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item3:hover .line3 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item4 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item4 .line4 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item4:hover .line4 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item5 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item5 .line5 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item4 .portfolio-dropdown-list .item5:hover .line5 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+          .wrapper___nav___wrap___right___list .item4:hover .portfolio-dropdown {
+            display: block; }
+        .wrapper___nav___wrap___right___list .item5 {
+          position: relative; }
+          .wrapper___nav___wrap___right___list .item5 .list-line {
+            bottom: -5px;
+            position: absolute;
+            border: 0px solid black;
+            width: 0%;
+            z-index: 2; }
+          .wrapper___nav___wrap___right___list .item5:hover .list-line {
+            border: 1px solid black;
+            width: 100%;
+            transition: linear 0.2s; }
+          .wrapper___nav___wrap___right___list .item5 .blog-dropdown {
+            position: absolute;
+            padding: 20px 20px 20px 0px;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 20;
+            left: -10px;
+            width: 130px;
+            display: none; }
+            .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list {
+              margin-left: 5px; }
+              .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list-item {
+                margin: 30px 0;
+                display: inline-block;
+                margin-bottom: 40px; }
+              .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item1 {
+                position: relative;
+                margin-top: 50px;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item1 .line1 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item1:hover .line1 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item2 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item2 .line2 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item2:hover .line2 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item3 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item3 .line3 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item5 .blog-dropdown-list .item3:hover .line3 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+          .wrapper___nav___wrap___right___list .item5:hover .blog-dropdown {
+            display: block; }
+        .wrapper___nav___wrap___right___list .item6 {
+          position: relative; }
+          .wrapper___nav___wrap___right___list .item6 .list-line {
+            bottom: -5px;
+            position: absolute;
+            border: 0px solid black;
+            width: 0%;
+            z-index: 2; }
+          .wrapper___nav___wrap___right___list .item6:hover .list-line {
+            border: 1px solid black;
+            width: 100%;
+            transition: linear 0.2s; }
+          .wrapper___nav___wrap___right___list .item6 .elements-dropdown {
+            position: absolute;
+            padding: 20px 20px 20px 0px;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            top: 20;
+            left: -10px;
+            width: 130px;
+            display: none; }
+            .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list {
+              margin-left: 5px; }
+              .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list-item {
+                margin: 30px 0;
+                margin-bottom: 40px; }
+              .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item1 {
+                position: relative;
+                margin-top: 50px;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item1 .line1 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item1:hover .line1 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item2 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item2 .line2 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item2:hover .line2 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item3 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item3 .line3 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item3:hover .line3 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+              .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item4 {
+                position: relative;
+                margin-bottom: 10px; }
+                .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item4 .line4 {
+                  position: absolute;
+                  border: 0px solid black;
+                  width: 0%; }
+                .wrapper___nav___wrap___right___list .item6 .elements-dropdown-list .item4:hover .line4 {
+                  border: 1px solid black;
+                  width: 100%;
+                  transition: linear 0.4s; }
+          .wrapper___nav___wrap___right___list .item6:hover .elements-dropdown {
+            display: block; }
+  .wrapper___slider {
+    width: 100%;
+    background-image: url(../img/h3-slider-background-2.jpg);
+    background-position: center;
+    padding: 190px 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: myAnim linear 4s infinite; }
+
+@keyframes myAnim {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.03); }
+  100% {
+    transform: scale(1); } }
+    .wrapper___slider___wrap {
+      width: 85%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: start; }
+      .wrapper___slider___wrap___txt {
+        width: 30%; }
+        .wrapper___slider___wrap___txt .p-1 {
+          font-size: 41px;
+          margin-bottom: 30px; }
+          .wrapper___slider___wrap___txt .p-1 span {
+            color: red; }
+        .wrapper___slider___wrap___txt .p-2 {
+          font-size: 17px;
+          font-weight: 400;
+          color: #707070;
+          line-height: 30px; }
+  .wrapper___vitrine {
+    width: 100%;
+    padding-top: 50px;
+    background-color: white; }
+    .wrapper___vitrine___wrap {
+      width: 85%;
+      margin: 0 auto; }
+      .wrapper___vitrine___wrap___top {
+        display: flex;
+        align-items: center;
+        padding: 20px; }
+        .wrapper___vitrine___wrap___top___list {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 30px; }
+          .wrapper___vitrine___wrap___top___list-item a {
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 600; }
+            .wrapper___vitrine___wrap___top___list-item a:hover {
+              color: red;
+              transition: linear 0.3s; }
+      .wrapper___vitrine___wrap___bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap; }
+        .wrapper___vitrine___wrap___bottom-item {
+          display: flex;
+          flex-direction: column;
+          width: 20%;
+          align-items: center;
+          justify-content: space-between;
+          background-color: white; }
+          .wrapper___vitrine___wrap___bottom-item img {
+            width: 300px;
+            overflow: hidden; }
+            .wrapper___vitrine___wrap___bottom-item img:hover {
+              transform: scale(1.05);
+              transition: linear 0.3s; }
+          .wrapper___vitrine___wrap___bottom-item p {
+            line-height: 60px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 5px; }
+          .wrapper___vitrine___wrap___bottom-item button {
+            border: 0;
+            background-color: white;
+            color: #838383;
+            cursor: pointer; }
