@@ -1,0 +1,18 @@
+.custom__header {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.custom__header ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+}
