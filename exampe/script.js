@@ -17,15 +17,23 @@ class User {
             id++
     }
 }
+
 function addUser(firstname, lastname, age, gender) {
     let newUser = new User(firstname, lastname, age, gender)
     users.push(newUser)
     renderUI(users)
 }
+
 function renderUI(array) {
     let innerHTML = ""
     for (let i = 0; i < array.length; i++) {
-        const { id, firstname, lastname, age, gender } = array[i]
+        const {
+            id,
+            firstname,
+            lastname,
+            age,
+            gender
+        } = array[i]
         innerHTML += `
         <tr>
         <th scope="row">${id}</th>

@@ -1,0 +1,6 @@
+let addBtn = document.getElementById("addBtn")
+const nameInp = document.getElementById("name")
+const items = document.getElementById("items")
+const searchInp = document.getElementById("search")
+const editInp = document.getElementById("editInput")
+const editSaveBtn = document.getElementById("editSaveBtn")
