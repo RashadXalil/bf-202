@@ -1,0 +1,15 @@
+const express = require("express")
+const app = express()
+const cors = require("cors")
+const ProductsRouter = require("./routes/products.router")
+const mongoose = require("mongoose")
+require('dotenv').config()
+app.use(express.json())
+app.use(cors())
+app.use("/products", ProductsRouter)
+mongoose.connect(process.env.DB_CONNECT).then(() => {
+    console.log("db connected")
+})
+app.listen(process.env.PORT, () => {
+    console.log(`app running on ${process.env.PORT}`)
+})
